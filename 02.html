@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>网页接收参数并弹出</title>
+    <style>
+        div {
+            margin:10px auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function ()
+        {
+            var oText = document.getElementsByTagName("input");
+            oText[2].onclick = function ()
+            {
+                for(var i=0;i<2;i++)
+                {
+                    alert(oText[i].value);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <input type = "text" value="北京市"/>
+    <input type = "text" value="朝阳区"/>
+    <input type = "button" value = "传参">
+</div>
+
+</body>
+</html>

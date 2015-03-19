@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1 {
+            width:500px;
+            margin:0 auto;
+            padding: 0;
+            text-align: center;
+        }
+        #div2 {
+            width: 100px;
+            height:100px;
+            background-color: black;
+            margin:10px auto;
+            display: block;
+        }
+    </style>
+    <script>
+        window.onload = function ()
+        {
+            oDiv = document.getElementById("div2");
+            oBtn = document.getElementsByTagName("button");
+            oBtn[0].onclick = function ()
+            {
+                oDiv.style.width = 200 + "px";
+            }
+            oBtn[1].onclick = function ()
+            {
+                oDiv.style.height = 200 + "px";
+            }
+            oBtn[2].onclick = function ()
+            {
+                oDiv.style.background = "red";
+            }
+            oBtn[3].onclick = function ()
+            {
+                oDiv.style.display = "none";
+            }
+            oBtn[4].onclick = function()
+            {
+                oDiv.style.display = "block";
+                oDiv.style.width = 100 + "px";
+                oDiv.style.height = 100 + "px";
+                oDiv.style.background = "black";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id = "div1">
+        <button>变宽</button>
+        <button>变高</button>
+        <button>变色</button>
+        <button>隐藏</button>
+        <button>重置</button>
+    </div>
+    <div id = "div2"></div>
+</body>
+</html>
